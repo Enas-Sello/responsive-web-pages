@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{  
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 500px;
+                }
+            .item{   
+                color: white;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                margin: 3px;
+                align-items: center;
+
+                }
+                .center{  
+                        flex-direction: row;
+                        display: flex;
+                    width: 80%;
+                flex-grow: 1;
+            }
+                .header{
+                    background-color: rgb(83, 83, 163);
+                    flex-grow: .1;
+                }
+                .sidnav{
+                    background-color: rgb(142, 118, 40);
+                    flex-shrink: 1.5;
+                }
+                .main{
+                    background-color: rgb(123, 45, 121);
+                    flex-grow: 1;
+                }
+                .sidbar{
+                    flex-shrink: 1.5;
+                    background-color: rgb(51, 162, 57);
+                }
+                .footer{
+                    background-color: rgb(161, 177, 15);
+                    flex-grow: .1;
+                }
+                @media (max-width:800px){
+                    .center{flex-direction: column;
+                    align-items: center;
+                width: 100%;}
+                .sidbar , .sidnav{flex-grow: .1;}
+                
+                }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header item ">header</div>
+        <div class="center">
+            <div class="sidnav item">sidnav</div>
+            <div class="main item">main</div>
+            <div class="sidbar item">sidbar</div>
+        </div>
+        
+        <div class="footer item">footer</div>
+    </div>
+</body>
+</html>
